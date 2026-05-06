@@ -2,6 +2,10 @@ package com.example.samdiclass1;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor // final로 적어둔 필드를 보고 그걸 넣는 생성자를 만들어줌
@@ -18,5 +22,18 @@ public class PrintService {
 
         return "HelloWorld!";
         //
+    }
+
+    public void signup(CreateUserRequest request) {
+        User user = User.builder()
+                .username(request.username())
+                .password(request.password())
+                .build();
+        userRepository.save(user);
+    }
+
+    // 유저 전체 조회
+    public List<User> findAllUsers() {
+        return userRepository.findAll();
     }
 }

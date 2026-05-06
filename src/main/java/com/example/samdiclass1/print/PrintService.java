@@ -1,9 +1,7 @@
-package com.example.samdiclass1;
+package com.example.samdiclass1.print;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 

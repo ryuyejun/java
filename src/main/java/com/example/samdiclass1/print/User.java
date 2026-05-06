@@ -1,10 +1,9 @@
-package com.example.samdiclass1;
+package com.example.samdiclass1.print;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import org.springframework.data.repository.NoRepositoryBean;
 
 @Entity
 @Getter

@@ -1,4 +1,4 @@
-package com.example.samdiclass1;
+package com.example.samdiclass1.print;
 
 public record CreateUserRequest(
         String username,

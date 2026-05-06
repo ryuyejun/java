@@ -1,4 +1,4 @@
-package com.example.samdiclass1;
+package com.example.samdiclass1.print;
 
 
 import lombok.RequiredArgsConstructor;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController // 화면이 아닌 json을 반환하기 위해 사용
-@RequestMapping("/print")
+@RequestMapping("/com/example/samdiclass1/print")
 @RequiredArgsConstructor
 
 public class PrintController {

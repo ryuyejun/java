@@ -1,0 +1,37 @@
+package com.example.samdiclass1.item;
+
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
+public class ForgeService {
+    public final ItemRepository itemRepository;
+
+    public void creamItem(CreateItemRequest request) {
+        Item foundItem = itemRepository.findByName(request.name()).orElse(null);
+        // 만약에 DB에 이미 있다면
+        if (foundItem != null) {
+            throw new IllegalArgumentException(request.name() + " 이름의 아이템이 이미 있습니다.");
+        }
+
+        // 공격력이 1보다 작을 때
+        if (request.attackPower() <= 0) {
+            throw new IllegalArgumentException("공격력은 1 이상이어야 합니다.");
+        }
+
+        // 내구도가 1보다 작을 때
+        if (request.durability() <= 0) {
+            throw new IllegalArgumentException("내구도는 1 이상이어야 합니다.");
+        }
+
+        Item item=Item.builder()
+                .name(request.name())
+                .type(request.type())
+                .attackPower(request.attackPower())
+                .enchancedLevel(0)
+                .build();
+        itemRepository.save(item);
+    }
+}

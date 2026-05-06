@@ -1,6 +1,6 @@
 package variable;
 
-public class problem2 {
+public class pro {
     public static void main(String[] args) {
         int div1 = 3 / 2;
         System.out.println("div1 = " + div1);

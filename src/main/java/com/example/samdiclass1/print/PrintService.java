@@ -12,8 +12,8 @@ public class PrintService {
 
     public String printHelloWorld() {
         User user=User.builder()
-                .username("홍정민")
-                .password("qwer1234!")
+                .username("류예준")
+                .password("ryuyejun0301!")
                 .build();
 
         userRepository.save(user);

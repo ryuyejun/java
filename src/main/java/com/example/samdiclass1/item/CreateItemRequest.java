@@ -6,4 +6,5 @@ public record CreateItemRequest (
         int attackPower,
         int durability
 ) {
+
 }

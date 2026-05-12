@@ -30,6 +30,7 @@ public class ForgeService {
                 .name(request.name())
                 .type(request.type())
                 .attackPower(request.attackPower())
+                .durability(request.durability())
                 .enchancedLevel(0)
                 .build();
         itemRepository.save(item);

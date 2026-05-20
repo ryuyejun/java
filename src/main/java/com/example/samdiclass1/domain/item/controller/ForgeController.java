@@ -19,4 +19,14 @@ public class ForgeController {
     public ItemResponse findItemByName(@RequestParam String name) {
         return forgeService.findItemByName(name);
     }
+
+    @PatchMapping("/update")
+    public ItemResponse updateItem(@RequestBody UpdateItem request) {
+        return forgeService.updateItem(request);
+    }
+
+    @DeleteMapping
+    public void deleteItem(@RequestParam String name) {
+        forgeService.deleteItem(name);
+    }
 }
